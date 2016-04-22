@@ -72,6 +72,15 @@
 			clocks = <&clkc 12>;
 		};
 
+
+		base_fpga_region: base_fpga_region {
+			compatible = "fpga-region";
+			fpga-mgr = <&devcfg>;
+			#address-cells = <0x1>;
+			#size-cells = <0x1>;
+			ranges;		
+		};
+
 		can0: can@e0008000 {
 			compatible = "xlnx,zynq-can-1.0";
 			status = "disabled";
@@ -348,6 +357,7 @@
 			clock-names = "ref_clk", "fclk0", "fclk1", "fclk2", "fclk3";
 			syscon = <&slcr>;
 		};
+
 
 		global_timer: timer@f8f00200 {
 			compatible = "arm,cortex-a9-global-timer";

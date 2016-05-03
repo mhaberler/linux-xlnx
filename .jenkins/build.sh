@@ -30,7 +30,7 @@ KDEB_PKGVERSION=${PKGVERSION}-${COMMIT_TIMESTAMP}.git${SHA1SHORT}
 
 cd .build
 
-make  KBUILD_DEBARCH=armhf KDEB_PKGVERSION=${KDEB_PKGVERSION} CC=/host-rootfs/usr/bin/arm-linux-gnueabihf-gcc deb-pkg -j16
+make  KBUILD_DEBARCH=armhf KDEB_PKGVERSION=${KDEB_PKGVERSION} CC=/host-rootfs/usr/bin/arm-linux-gnueabihf-gcc bindeb-pkg -j16
 
 # move results
 mkdir -p ../.output || true

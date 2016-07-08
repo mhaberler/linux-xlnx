@@ -817,7 +817,7 @@ int __uio_register_device(struct module *owner,
 	atomic_set(&idev->event, 0);
 
 	ret = uio_get_minor(idev);
-	if (ret)
+	if (ret < 0)
 		return ret;
 
 	idev->dev = device_create(&uio_class, parent,

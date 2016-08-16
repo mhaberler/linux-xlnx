@@ -16,7 +16,7 @@ rm -rf .build || true
 mkdir .build
 
 
-make O=.build jd2-mzed_defconfig
+make O=.build mksocfpga-zynq_defconfig
 
 KVERSION=$(make -s O=.build kernelversion)
 

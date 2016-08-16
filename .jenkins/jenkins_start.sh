@@ -3,7 +3,7 @@
 DOCKER_IMAGE=machinekit/mk-builder:wheezy-armhf
 
 # fetch the latest image
-docker pull ${DOCKER_IMAGE}
+#docker pull ${DOCKER_IMAGE}
 
 # make sure we are in the root dir
 cd "$(dirname "$(readlink -f $0)")/../"
